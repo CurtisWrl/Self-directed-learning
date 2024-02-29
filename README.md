@@ -10,7 +10,7 @@ I'm introducing you some funtions that this bot can do.
 ### Timeout
 Which you can timeout users. <br />
 Use: /timeout member: minutes: hours: reason: <br />
-You can fill 0 in minutes and hours section. 
+You can fill 0 in minutes or hours section. 
 ### Say
 Say anything you wanna say via this bot. <br />
 Use: /say message
