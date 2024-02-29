@@ -30,32 +30,32 @@ async def say(ctx, message: str):
     "member",
     discord.Member,
     description="The user to timeout",
-    required= False
+    required= True
 )
 
 @option(
     "minutes",
     int,
     description="The amount of time to timeout the user for",
-    required= False
+    required= True
     )
 
 @option(
     "hours",
     int,
     description="The amount of time to timeout the user for",
-    required= False
+    required= True
 )
 
 @option(
     "reason",
     str,
     description="The reason for the timeout",
-    required= False
+    required= True
 )
-async def timeout(ctx:discord.ApplicationContext, member: discord.Member, minutes: int, hours: int, reason: str = None):
+async def timeout(ctx:discord.ApplicationContext, member: discord.Member, minutes: int, hours: int, reason: str):
     duration = datetime.timedelta(minutes=minutes, hours=hours)
     await member.timeout_for(duration, reason=reason)
-    await ctx.respond(f"Successfully timed out {member.mention} for {minutes} because of {reason}")
-
+    await ctx.respond(f"Successfully timed out {member.mention} because of {reason}")
+    
 bot.run("sus")
