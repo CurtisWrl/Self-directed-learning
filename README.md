@@ -1,7 +1,8 @@
 # This Is My Self-Directed Learning Project For My School In 2024
-What is self-directed learning?
-> Self-directed learning is an important connotation of the 108 curriculum, which emphasizes that students are spontaneous and active learners. High school courses plan "flexible learning time" every week, allowing students to decide the topics they want to learn and learn at their own pace and method.
-Why am I doing this?
+What is self-directed learning? <br />
+> Self-directed learning is an important connotation of the 108 curriculum, which emphasizes that students are spontaneous and active learners. High school courses plan "flexible learning time" every week, allowing students to decide the topics they want to learn and learn at their own pace and method.<br />
+
+Why am I doing this?<br />
 > for fun. btw i know nothin about these things.
 
 # Funtions
