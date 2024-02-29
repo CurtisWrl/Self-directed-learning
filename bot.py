@@ -58,4 +58,4 @@ async def timeout(ctx:discord.ApplicationContext, member: discord.Member, minute
     await member.timeout_for(duration, reason=reason)
     await ctx.respond(f"Successfully timed out {member.mention} for {minutes} because of {reason}")
 
-bot.run("MTIxMDQ2Nzc1Mzc5MDU0NTk3MQ.GdCB6I.Rk7PSly-6j1UCiUYuM3w0KmnXamQFl4FYzir7Q")
+bot.run("sus")
