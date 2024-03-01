@@ -1,3 +1,4 @@
+#week 1: create a bot
 import discord
 import datetime
 import json
@@ -13,7 +14,7 @@ async def on_ready():
 async def on_message(msg):
     pass
 
-#Week 1: say command
+#Week 2: say command
 @bot.slash_command(name="say", description="Echoes back your message.")
 @option(
     "message",
