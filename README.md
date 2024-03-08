@@ -15,5 +15,5 @@ You can fill 0 in minutes or hours section.
 Say anything you wanna say via this bot. <br />
 Use: /say message
 ### Ban
-Ban who you want to be banned
+Ban who you want to bann. <br />
 Use: /ban member: reason:
