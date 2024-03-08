@@ -58,5 +58,22 @@ async def timeout(ctx:discord.ApplicationContext, member: discord.Member, minute
     duration = datetime.timedelta(minutes=minutes, hours=hours)
     await member.timeout_for(duration, reason=reason)
     await ctx.respond(f"Successfully timed out {member.mention} because of {reason}")
+#ban
+@bot.slash_command(name='ban', description='Ban a user')
+@option(
+    'member',
+    discord.Member,
+    description='The user to ban',
+    required=True
+)
+@option(
+    'reason',
+    str,
+    description='The reason for the ban',
+    required=True
+)
+async def ban(ctx: discord.ApplicationContext, member: discord.Member, reason: str):
+    await member.ban(reason=reason)
+    await ctx.respond(f"Successfully banned {member.mention} for {reason}")
     
 bot.run(‘token')
