@@ -75,5 +75,40 @@ async def timeout(ctx:discord.ApplicationContext, member: discord.Member, minute
 async def ban(ctx: discord.ApplicationContext, member: discord.Member, reason: str):
     await member.ban(reason=reason)
     await ctx.respond(f"Successfully banned {member.mention} for {reason}")
+#Week 5 kick command
+@bot.slash_command(name='kick', description='Kick a user')
+@option(
+    'member',
+    discord.Member,
+    description='The user to kick',
+    required=True
+)
+@option(
+    'reason',
+    str,
+    description='The reason for the kick',
+    required=True
+)
+async def kick(ctx: discord.ApplicationContext, member: discord.Member, reason: str):
+    await member.kick(reason=reason)
+    await ctx.respond(f"Successfully kicked {member.mention} for {reason}")
+
+#Giving a role
+@bot.slash_command(name='give_role', description='Give a role to a user')
+@option(
+    'member',
+    discord.Member,
+    description='The user to give the role to',
+    required=True
+)
+@option(
+    'role',
+    discord.Role,
+    description='The role to give to the user',
+    required=True
+)
+async def role(ctx: discord.ApplicationContext, member: discord.Member, role: discord.Role):
+    await member.add_roles(role)
+    await ctx.respond(f"Successfully given {role.mention} to {member.mention}")
     
 bot.run(‘token')
