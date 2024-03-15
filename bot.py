@@ -110,5 +110,16 @@ async def kick(ctx: discord.ApplicationContext, member: discord.Member, reason: 
 async def role(ctx: discord.ApplicationContext, member: discord.Member, role: discord.Role):
     await member.add_roles(role)
     await ctx.respond(f"Successfully given {role.mention} to {member.mention}")
+
+#Get a user's display avatar
+@bot.slash_command(name='avatar', description='Get a user\'s display avatar')
+@option(
+    'member',
+    discord.Member,
+    description='The user to get the avatar of',
+    required=True
+)
+async def avatar(ctx: discord.ApplicationContext, member: discord.Member):
+    await ctx.respond(member.display_avatar.url)
     
-bot.run(‘token')
+bot.run(‘your bot's token')
