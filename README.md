@@ -23,3 +23,6 @@ Use: /kick member: reason:
 ### Give A Role
 Give a member a role. <br />
 Use: /give_role member: role:
+### Get A User's Display Avatar
+Display avatar and avatar are different, display avatar is for users in a "server". <br />
+Use: /avatar member:
