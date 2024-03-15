@@ -17,3 +17,9 @@ Use: /say message
 ### Ban
 Ban who you want to ban. <br />
 Use: /ban member: reason:
+### Kick
+Kick who you want to kick. <br />
+Use: /kick member: reason:
+### Give A Role
+Give a member a role. <br />
+Use: /give_role member: role:
