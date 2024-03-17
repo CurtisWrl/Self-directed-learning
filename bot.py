@@ -127,7 +127,7 @@ async def avatar(ctx: discord.ApplicationContext, member: discord.Member):
 async def help(ctx: discord.ApplicationContext):
     with open('help.json', 'r') as f:
         help_data = json.load(f)
-    embed = discord.Embed(title='Help', description='Here are the available commands:', color=0x00ff00)
+    embed = discord.Embed(title='Help', description='Here are the available commands:', color=0xffff00)
     for command in help_data:
         embed.add_field(name=command, value=help_data[command], inline=False)
     await ctx.respond(embed=embed)
