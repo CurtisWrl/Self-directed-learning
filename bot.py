@@ -121,5 +121,15 @@ async def role(ctx: discord.ApplicationContext, member: discord.Member, role: di
 )
 async def avatar(ctx: discord.ApplicationContext, member: discord.Member):
     await ctx.respond(member.display_avatar.url)
+
+#help slash command
+@bot.slash_command(name='help', description='Get help')
+async def help(ctx: discord.ApplicationContext):
+    with open('help.json', 'r') as f:
+        help_data = json.load(f)
+    embed = discord.Embed(title='Help', description='Here are the available commands:', color=0x00ff00)
+    for command in help_data:
+        embed.add_field(name=command, value=help_data[command], inline=False)
+    await ctx.respond(embed=embed)
     
 bot.run(‘your bot's token')
