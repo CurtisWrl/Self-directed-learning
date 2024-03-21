@@ -26,3 +26,6 @@ Use: /give_role member: role:
 ### Get A User's Display Avatar
 Display avatar and avatar are different, display avatar is for users in a "server". <br />
 Use: /avatar member:
+### Delete Messages in A Channel
+You can delete messages with an amount. <br />
+Use: /purge amount:
