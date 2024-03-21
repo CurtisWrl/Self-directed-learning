@@ -131,5 +131,16 @@ async def help(ctx: discord.ApplicationContext):
     for command in help_data:
         embed.add_field(name=command, value=help_data[command], inline=False)
     await ctx.respond(embed=embed)
+
+#delete messages(purge command) with an amount
+@bot.slash_command(name='purge', description='Delete messages')
+@option(
+    'amount',
+    int,
+    description='The amount of messages to delete',
+    required=True
+)
+async def purge(ctx: discord.ApplicationContext, amount: int):
+    await ctx.channel.purge(limit=amount)
     
 bot.run(‘your bot's token')
