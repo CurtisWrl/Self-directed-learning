@@ -4,5 +4,6 @@
     "/ban": "You can ban a member by using /ban.",
     "/kick": "You can kick a member by using /kick.",
     "/give_role": "You can give a member a role by using /give_role.",
-    "/avatar": "You can get the avatar of a member by using /avatar."
+    "/avatar": "You can get the avatar of a member by using /avatar.",
+    "/purge": "You can purge messages by using /purge."
 }
