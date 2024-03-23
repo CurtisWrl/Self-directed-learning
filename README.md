@@ -29,3 +29,9 @@ Use: /avatar member:
 ### Delete Messages in A Channel
 You can delete messages with an amount. <br />
 Use: /purge amount:
+### Set Up A Feedback Channel
+You can create a channel and let the bot remember the channel is particularly for giving feedback. <br />
+Use: /feedback_setup channel:
+### Giving Feedback
+You can give feedback by using the bot, and the bot will send your feedback in the particular channel. <br />
+Use: /feedback feedback:
