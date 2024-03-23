@@ -5,5 +5,7 @@
     "/kick": "You can kick a member by using /kick.",
     "/give_role": "You can give a member a role by using /give_role.",
     "/avatar": "You can get the avatar of a member by using /avatar.",
-    "/purge": "You can purge messages by using /purge."
+    "/purge": "You can purge messages by using /purge.",
+    "/feedback_setup": "You can setup feedback channel by using /feedback_setup.",
+    "/feedback": "You can send feedback to the bot by using /feedback."
 }
