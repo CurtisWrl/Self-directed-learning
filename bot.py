@@ -142,5 +142,25 @@ async def help(ctx: discord.ApplicationContext):
 )
 async def purge(ctx: discord.ApplicationContext, amount: int):
     await ctx.channel.purge(limit=amount)
+
+#Week 7: Use the bot to give feedback in a particular channel
+#Set up the channel
+@bot.slash_command(name="feedback_setup")
+async def feedback_setup(ctx, channel: discord.TextChannel):
+    with open("sus.json", "r") as f:
+        data = json.load(f)
+        data['feedback'] = channel.id
+    with open("sus.json", "w") as f: #用read開啓
+        json.dump(data, f) #把新的資料填上去
+    await ctx.respond("feedback setup complete")
+
+#Giving feedback
+@bot.slash_command(name="feedback")
+async def feedback(ctx, feedback):
+    with open("sus.json", "r") as f: #用read開啓
+        data = json.load(f) #獲取json内容
+    channel = bot.get_channel(data["feedback"])
+    await channel.send(feedback)
+    await ctx.respond("Successfully sent.")
     
 bot.run(‘your bot's token')
